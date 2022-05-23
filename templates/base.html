@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" href="{{ url_for('static', filename='favicon.jpg') }}" type="image/x-icon">
-    <!-- Add your favicon above here in 'filename'! -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     <title>{% block title %} {% endblock %}</title>
   </head>
   <body>
     <nav class="navbar">
-      <div>
-        
+      <div class="title">
+        <a href="/">
+          <h1>GlitchMedia</h1>
+        </a>
       </div>
+      <ul class="navlinks">
+        <li><a class="navlink" href="/">Home</a></li>
+        <li><a class="navlink" href="{{ url_for('posts') }}">Posts</a></li>
+        {% if loggedIn %}
+          <li><a class="navlink dashboard" href="{{ url_for('dashboard') }}">Dashboard</a></li>
+        {% else %}
+          <li><a class="navlink login" href="{{ url_for('login') }}">Login</a></li>
+        {% endif %}
     </nav>
 
-    <div class="content">
-      {% for message in get_flashed_messages() %}
-        <div class="alert alert-danger">{{ message }}</div>
-      {% endfor %}
-      {% block content %} {% endblock %}
+    <div class="outside-content">
+      <div class="content">
+        {% for message in get_flashed_messages() %}
+          <div class="alert">{{ message }}</div>
+        {% endfor %}
+        {% block content %} {% endblock %}
+      </div>
     </div>
   </body>
 </html>
