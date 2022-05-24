@@ -65,3 +65,16 @@ button {
   vertical-align: baseline;
   padding: .25rem;
 }
+
+.like-badge {
+  display: inline-block;
+  font-size: 80%;
+  border-radius: .25rem;
+  border: 0px solid;
+  background: #00ff2a;
+  color: #FFF;
+  white-space: nowrap;
+  line-height: 4;
+  vertical-align: middle;
+  padding: .25rem;
+}

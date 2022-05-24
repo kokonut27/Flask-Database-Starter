@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{% block title %} {{ username }} {% endblock %}</h1>
+  <div class="badge-outside">
+    <span class="badge">User ID: {{ user_id }}</span>
+  </div>
+{% endblock %}

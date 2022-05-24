@@ -4,6 +4,14 @@ CREATE TABLE posts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     title TEXT NOT NULL,
+    username TEXT NOT NULL,
+    userid INTEGER NOT NULL,
+    likes INTEGER NOT NULL,
     content TEXT NOT NULL,
     topic TEXT NOT NULL
 );
+
+CREATE TABLE userInfo (
+  username TEXT NOT NULL,
+  userid TEXT NOT NULL
+)

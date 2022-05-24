@@ -4,11 +4,19 @@
   <h1>{% block title %} Posts {% endblock %}</h1>
   {% for post in posts %}
     <div>
-      <a href="{{ url_for('post', post_id=post['id']) }}">
-        <h2>{{ post['title'] }}</h2>
-      </a>
+      <div>
+        <a href="{{ url_for('post', post_id=post['id']) }}">
+          <h2>{{ post['title'] }}</h2>
+        </a>
+        <a href="{{ url_for('like', post_id=post['id'] ) }}" class="likes">
+          <span class="like-badge">&hearts; {{ post['likes'] }}</span>
+        </a>
+      </div>
       <div class="badge-outside">
         <span class="badge">{{ post['created'] }}</span>
+        <a href="{{ url_for('user', user_id=post['userid']) }}">
+          <span class="badge">Author: {{ post['username'] }}</span>
+        </a>
       </div>
     </div>
   {% endfor %}
