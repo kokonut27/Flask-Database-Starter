@@ -1,5 +1,5 @@
-# GlitchMedia
-> A Flask social media app that makes life enojoyable! This includes an implemented database using Replit's DB and Sqlite3.
+# Flask Database Starter
+> A starter application to start of your journey of Python's popular framework Flask, Replit's DB, Sqlite3, and the ever-safe Replit Auth.
 
 ### Features:
 * Fully working database using Replit's DB and Sqlite3.

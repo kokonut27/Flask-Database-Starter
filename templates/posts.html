@@ -6,7 +6,7 @@
     <div>
       <div>
         <a href="{{ url_for('post', post_id=post['id']) }}">
-          <h2>{{ post['title'] }}</h2>
+          <h2 style="display: inline-block">{{ post['title'] }}</h2>
         </a>
         <a href="{{ url_for('like', post_id=post['id'] ) }}" class="likes">
           <span class="like-badge">&hearts; {{ post['likes'] }}</span>

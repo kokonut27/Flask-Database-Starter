@@ -12,6 +12,7 @@ CREATE TABLE posts (
 );
 
 CREATE TABLE userInfo (
-  username TEXT NOT NULL,
-  userid TEXT NOT NULL
-)
+  userNum INTEGER PRIMARY KEY AUTOINCREMENT,
+  userid INTEGER NOT NULL,
+  username TEXT NOT NULL
+);

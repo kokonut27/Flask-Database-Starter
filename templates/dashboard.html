@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1> {{ username }} </h1>
+  <h1> {% block title %} Dashboard {% endblock %}- {{ username }} </h1>
   <span class="badge"> User ID: {{ user_id }} </span>
   <br>
   <h2>Your posts:</h2>

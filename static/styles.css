@@ -71,10 +71,14 @@ button {
   font-size: 80%;
   border-radius: .25rem;
   border: 0px solid;
-  background: #00ff2a;
-  color: #FFF;
+  background: #00c700;
+  color: #d6d6d6;
   white-space: nowrap;
-  line-height: 4;
+  line-height: 2;
   vertical-align: middle;
   padding: .25rem;
+}
+
+.likes {
+  padding-left: .5rem;
 }
